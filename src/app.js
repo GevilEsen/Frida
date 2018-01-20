@@ -1,7 +1,10 @@
 import React from 'react'
+import FSteps from './Steps'
 
-const App = () => (
-  <h1>Hello, Frida!</h1>
-)
-
-export default App
+export default class App extends React.Component {
+  render() {
+    return (
+      <FSteps />
+    )
+  }
+}
