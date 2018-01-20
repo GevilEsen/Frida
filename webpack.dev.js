@@ -20,7 +20,25 @@ module.exports = {
   // loaders
   module: {
     rules: [
-      {test: /\.jsx?$/, use: ['babel-loader'], exclude: /node_modules/}
+      {
+        test: /\.jsx?$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
+      }, {
+        test: /\.css$/,
+        loader: "style!css?module&localIdentName=[hash:base64:5]&-url"
+      }, {
+        test: /\.less$/,
+        use: [
+          'style-loader', {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          'less-loader'
+        ]
+      }
     ]
   },
   plugins: [
@@ -32,10 +50,10 @@ module.exports = {
     new webpack.NamedModulesPlugin() // 执行热替换时打印模块名字
   ],
   devServer: {
-    hot: true,  // 激活服务器的 HMR
+    hot: true, // 激活服务器的 HMR
     contentBase: path.resolve(root, 'dist'),
     publicPath: '/',
     port: 3000,
     historyApiFallback: true
-  },
+  }
 }

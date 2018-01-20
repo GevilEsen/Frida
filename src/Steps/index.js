@@ -1,37 +1,46 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { LocaleProvider, DatePicker, message } from 'antd';
-// 由于 antd 组件的默认文案是英文，所以需要修改为中文
-import zhCN from 'antd/lib/locale-provider/zh_CN';
-import moment from 'moment';
-import 'moment/locale/zh-cn';
+import React from 'react'
+import { Form, Input, Steps } from 'antd'
+const FormItem = Form.Item
+const Step = Steps.Step
+const style = './index.less'
 
-moment.locale('zh-cn');
+const steps = [
+  {
+    step: 'step1',
+    title: '步骤一',
+    content: '步骤一'
+  },
+  {
+    step: 'step2',
+    title: '步骤二',
+    content: '步骤二'
+  },
+  {
+    step: 'step3',
+    title: '步骤三',
+    content: '步骤三'
+  }
+]
 
 export default class FSteps extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     date: '',
-  //   };
+  constructor(props) {
+    super(props);
+    this.state = {
+      current: 0,
+    };
+  }
+
+  // state = {
+  //   current: 0,
   // }
 
-  state = {
-    date: ''
-  }
-
-  handleChange(date) {
-    message.info('您选择的日期是: ' + date.toString());
-    this.setState({ date });
-  }
   render() {
+    const { current } = this.state
+
     return (
-      <LocaleProvider locale={zhCN}>
-        <div style={{ width: 400, margin: '100px auto' }}>
-          <DatePicker onChange={value => this.handleChange(value)} />
-          <div style={{ marginTop: 20 }}>当前日期：{this.state.date.toString()}</div>
-        </div>
-      </LocaleProvider>
-    );
+      <div className={style.hello}>
+        <h1>Hello, Frida!</h1>
+      </div>
+    )
   }
 }
