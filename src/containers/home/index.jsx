@@ -11,7 +11,7 @@ class Home extends React.Component {
     return (
       <div>
         <h2>Hey, Frida!</h2>
-        <Button type="primary">Primary</Button>
+        <Button type="primary">按钮</Button>
       </div>
     )
   }
