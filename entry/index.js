@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Home from '../src/containers/home/index.jsx'
+import Routes from '../src/containers/routes/index.jsx'
 
 ReactDOM.render(
-  <Home/>, document.getElementById('app'))
+  <Routes/>, document.getElementById('app'))
