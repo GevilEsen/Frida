@@ -1,5 +1,19 @@
+// {
+//     "presets": ["react", "env"],
+//     "env": {
+//         "development": {
+//             "presets": ["react-hmre"]
+//         }
+//     }
+// }
+
+
 {
-    "presets": ["react", "env"],
+    "presets": [
+        "env",
+        "react",
+        "stage-0"
+    ],
     "env": {
         "development": {
             "presets": ["react-hmre"]

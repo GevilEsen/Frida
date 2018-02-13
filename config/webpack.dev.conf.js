@@ -76,9 +76,9 @@ const config = merge(baseWebpackConfig, {
             }
         ],
         /*换气浏览器，并打开本项目地址*/
-        after() {
-            opn('http://localhost:' + this.port)
-        }
+        // after() {
+        //     opn('http://localhost:' + this.port)
+        // }
     }
 })
 
