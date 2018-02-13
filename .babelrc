@@ -1,22 +1,22 @@
-// {
-//     "presets": ["react", "env"],
-//     "env": {
-//         "development": {
-//             "presets": ["react-hmre"]
-//         }
-//     }
-// }
-
-
 {
     "presets": [
-        "env",
         "react",
-        "stage-0"
+        "env"
+    ],
+    "plugins": [
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "style": "less"
+            }
+        ]
     ],
     "env": {
         "development": {
-            "presets": ["react-hmre"]
+            "presets": [
+                "react-hmre"
+            ]
         }
     }
 }
