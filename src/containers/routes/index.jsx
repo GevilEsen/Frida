@@ -2,6 +2,7 @@ import React from 'react'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import Home from '../home'
 import Login from '../login'
+import Basic from '../basic'
 import style from './index.less'
 
 class Routes extends React.Component {
@@ -13,6 +14,7 @@ class Routes extends React.Component {
             <IndexRoute component={Home} />
           </Route>
           <Route path="/login" component={Login}></Route>
+          <Route path="/basic" component={Basic}></Route>
         </Router>
       </div>
     )
