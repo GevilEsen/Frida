@@ -10,9 +10,8 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2 className={style.title}>Hey, Frida!</h2>
-        <Button type="primary">按钮</Button>
+      <div className={style.home}>
+        <h2 className={style.title}>Hey, Frida.js!</h2>
       </div>
     )
   }
