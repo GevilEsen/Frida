@@ -34,16 +34,30 @@ const config = merge(baseWebpackConfig, {
                 exclude: [path.resolve(__dirname, '../node_modules')]
             }, {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: [
+                    {
+                        loader: 'style-loader'
+                    }, {
+                        loader: 'css-loader'
+                    }
+                ]
             }, {
                 test: /\.less$/,
                 use: [
                     {
                         loader: "style-loader"
                     }, {
-                        loader: "css-loader"
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                        }
                     }, {
-                        loader: "less-loader"
+                        loader: "less-loader",
+                        options: {
+                            modules: true,
+                            localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                        }
                     }
                 ]
             }, {
@@ -76,9 +90,7 @@ const config = merge(baseWebpackConfig, {
             }
         ],
         /*换气浏览器，并打开本项目地址*/
-        // after() {
-        //     opn('http://localhost:' + this.port)
-        // }
+        // after() {     opn('http://localhost:' + this.port) }
     }
 })
 
