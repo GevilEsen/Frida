@@ -1,7 +1,15 @@
-//判断环境，选用不同的store配置
-//- 仅在开发环境使用redux调试工具，其他一样
-if (process.env.NODE_ENV === 'production') {
-    module.exports = require('./store.prod')
-} else {
-    module.exports = require('./store.dev')
+import { createStore } from 'redux'
+
+const counter = (state = 0, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1
+    case 'DECREMENT':
+      return state - 1
+    default:
+      return state
+  }
 }
+const store = createStore(counter)
+
+export default store
