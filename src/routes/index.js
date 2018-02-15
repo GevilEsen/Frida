@@ -6,18 +6,18 @@ const routes = [
   {
     path: '/',
     component: Home,
-    indexRoute: {
-      component: Home
-    },
     childRoutes: [
       {
-        path: 'basic',
-        component: Basic
-      }, {
-        path: 'login',
-        component: Login
+        path: 'index(.html)',
+        component: Home
       }
     ]
+  }, {
+    path: 'basic',
+    component: Basic
+  }, {
+    path: 'login',
+    component: Login
   }
 ]
 

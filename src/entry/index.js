@@ -5,8 +5,8 @@ import { routerReducer, syncHistoryWithStore } from 'react-router-redux'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import routes from '../routes'
 import store from '../redux'
+import Root from '../containers/root'
 // import configureStore from 'store'
-import Root from '../containers/routes'
 
 // const store = configureStore(window.REDUX_STATE, { routing: routerReducer })
 
