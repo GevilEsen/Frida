@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import DevTool from '../containers/devtool'
 
 const counter = (state = {count: 0}, action) => {
