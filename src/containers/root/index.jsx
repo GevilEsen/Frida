@@ -9,6 +9,7 @@ class Root extends React.Component {
   render() {
     return (
       <div>
+        <h2>1233213131</h2>
         <DevTool />
       </div>
     )

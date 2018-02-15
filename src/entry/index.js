@@ -12,7 +12,7 @@ import Root from '../containers/root'
 
 render(
     <Provider store={store}>
-      <Router history={browserHistory} routes={routes}>
+      {/* <Router history={browserHistory} routes={routes}> */}
         <Root />
-      </Router>
+      {/* </Router> */}
     </Provider>, document.getElementById('app'))
