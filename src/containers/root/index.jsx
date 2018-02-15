@@ -1,16 +1,14 @@
 import React from 'react'
+import Layout from '../layout'
 import DevTool from '../devtool'
 
 class Root extends React.Component {
-  componentDidMount() {
-    console.log(123)
-  }
 
   render() {
     return (
       <div>
-        <h2>1233213131</h2>
-        <DevTool />
+        <Layout/>
+        <DevTool/>
       </div>
     )
   }

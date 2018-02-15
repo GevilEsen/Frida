@@ -1,24 +1,34 @@
 import Home from '../containers/home'
 import Login from '../containers/login'
 import Basic from '../containers/basic'
+import Root from '../containers/root';
 
-const routes = [
-  {
-    path: '/',
-    component: Home,
-    childRoutes: [
-      {
-        path: 'index(.html)',
-        component: Home
+const requireAuth = (state, replace, param) => {
+  console.log(param)
+}
+
+const routes = (param) => {
+  return [
+    {
+      path: '/',
+      component: Root,
+      childRoutes: [
+        {
+          path: 'index(.html)',
+          component: Home
+        }, {
+          path: 'basic',
+          component: Basic
+        }, {
+          path: 'login',
+          component: Login
+        }
+      ],
+      onEnter: function (nextState, replaceState) {
+        requireAuth(nextState, replaceState, param);
       }
-    ]
-  }, {
-    path: 'basic',
-    component: Basic
-  }, {
-    path: 'login',
-    component: Login
-  }
-]
+    }
+  ]
+}
 
 export default routes
