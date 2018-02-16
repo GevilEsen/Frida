@@ -7,13 +7,8 @@ import configureRoutes from '../routes'
 import store from '../redux'
 import Root from '../containers/root'
 import Home from '../containers/home'
-// import configureStore from 'store'
-
-// const store = configureStore(window.REDUX_STATE, { routing: routerReducer })
 
 const routes = configureRoutes(store.getState());
-
-// console.log(routerReducer)
 
 render(
     <Provider store={store}>

@@ -12,7 +12,7 @@ class Home extends React.Component {
   }
 
   onClick() {
-    // console.log(this.props)
+    console.log(this.props)
     this.props.onClick()
   }
 
@@ -21,21 +21,22 @@ class Home extends React.Component {
 
     return (
       <div className={style.home}>
-        <h2 className={style.title}>Hey, Frida.js!{home.count}</h2>
-        <Button type="primary" onClick={this.onClick.bind(this)}>按钮</Button>
+        <h2 className={style.title}>Hey, Frida.js!{home}</h2>
+        <Button type="primary" onClick={this
+          .onClick
+          .bind(this)}>按钮</Button>
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  return { home: state }
+  return { home: state.count }
 }
 
 const mapDispatchToProps = {
-  onClick: (filter) => {
-    type: 'INCREMENT',
-      filter
+  onClick: () => {
+    type: 'INCREMENT'
   }
 }
 

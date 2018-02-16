@@ -1,7 +1,8 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 import DevTool from '../containers/devtool'
 
-const counter = (state = {count: 0}, action) => {
+const reducer = (state = { count: 0 }, action) => {
   switch (action.type) {
     case 'INCREMENT':
       return state.count + 1
@@ -11,6 +12,7 @@ const counter = (state = {count: 0}, action) => {
       return state
   }
 }
-const store = createStore(counter, DevTool.instrument())
+
+const store = createStore(reducer, DevTool.instrument())
 
 export default store
