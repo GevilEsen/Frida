@@ -1,11 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
 import DevTool from '../containers/devtool'
+import state1 from './state.js'
+import action1 from './action.js'
 
-const logger = createLogger()
-
-const reducer = (state = { count: 0 }, action) => {
+const reducer = (state = state1, action = action1) => {
   switch (action.type) {
     case 'INCREMENT':
       return state = {count: state.count + 1}
