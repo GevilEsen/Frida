@@ -9,24 +9,17 @@ const MenuItem = Menu.Item
 class Nav extends React.Component {
   render() {
     return (
-        <Menu
-          className={style.nav}
-          // defaultSelectedKeys={['1']}
-          // defaultOpenKeys={['sub1']}
-          mode="inline"
-        >
-          <MenuItem key="2">
-            <Link to="/page2"><Icon type="windows" />页面1</Link>
-          </MenuItem>
-          <MenuItem key="3">
-            <Link to="/page2"><Icon type="windows" />页面2</Link>
-          </MenuItem>
-          <SubMenu key="sub1" title={<span><Icon type="windows" /><span>页面3</span></span>}>
-            <MenuItem key="4">
-              <Link to="/page2"><Icon type="windows" />页面3-1</Link>
-            </MenuItem>
-          </SubMenu>
-        </Menu>
+      <Menu
+        className={style.nav}
+        mode="inline"
+      >
+        <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
+          <MenuItem key="1"><Link to="/page2">Option 1</Link></MenuItem>
+          <MenuItem key="2"><Link to="/page2">Option 1</Link></MenuItem>
+          <MenuItem key="3"><Link to="/page2">Option 1</Link></MenuItem>
+          <MenuItem key="4"><Link to="/page2">Option 1</Link></MenuItem>
+        </SubMenu>
+      </Menu>
         )
       }
     }
