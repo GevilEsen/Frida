@@ -1,5 +1,15 @@
+@import '../../../utils/mixin.less';
+
 .left-panel {
-  width: 50px;
+  width: 225px;
   height: 100vh;
-  background: #ccc;
+  background: @background;
+  .logo {
+    text-align: center;
+    line-height: 60px;
+    .text {
+      font-size: 25px;
+      color: @white;
+    }
+  }
 }

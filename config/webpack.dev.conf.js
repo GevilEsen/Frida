@@ -9,6 +9,13 @@ const config = merge(baseWebpackConfig, {
     output: {
       filename: "bundle.js"
     },
+    resolve: {
+        alias: {
+            component: path.resolve(__dirname, '../src/component'),
+            containers: path.resolve(__dirname, '../src/containers'),
+            utils: path.resolve(__dirname, '../src/utils')
+        }
+    },
     plugins: [
         /*设置开发环境*/
         new webpack.DefinePlugin({
