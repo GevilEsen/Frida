@@ -15,7 +15,10 @@ const routes = [
         path: 'basic',
         component: Basic,
         childRoutes: [
-          { path: '/messages/:id', component: Home },
+          {
+            path: 'index',
+            component: Login
+          }
         ]
       }, {
         path: 'login',

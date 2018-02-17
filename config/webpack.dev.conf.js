@@ -7,10 +7,7 @@ const webpackFile = require('./webpack.file.conf') // 文件路径配置
 
 const config = merge(baseWebpackConfig, {
     output: {
-        path: path.resolve(webpackFile.devDirectory),
-        filename: 'js/[name].js',
-        chunkFilename: 'js/[name]-[id].js',
-        publicPath: ''
+      filename: "bundle.js"
     },
     plugins: [
         /*设置开发环境*/

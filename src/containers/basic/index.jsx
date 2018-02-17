@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button} from 'antd'
+import { Button } from 'antd'
 import { connect } from 'react-redux'
 
 class Basic extends React.Component {
@@ -15,10 +15,16 @@ class Basic extends React.Component {
   render() {
     return (
       <div>
-        <Button type="primary">increment</Button>
-        <Button type="primary">decrement</Button>
+        {
+          this.props.children ? this.props.children : (
+            <div>
+              <Button type="primary">increment</Button>
+              <Button type="primary">decrement</Button>
+            </div>
+          )
+        }
       </div>
-      
+
     )
   }
 }
