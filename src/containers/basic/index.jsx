@@ -1,13 +1,11 @@
 import React from 'react'
-import {Button} from 'antd';
+import {Button} from 'antd'
+import { connect } from 'react-redux'
 
 class Basic extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = {
-      count: 0
-    }
   }
 
   componentDidMount() {
@@ -15,12 +13,8 @@ class Basic extends React.Component {
   }
 
   render() {
-    const {count} = this.state
-    console.log(state)
     return (
       <div>
-        <h2>This state is {count}
-      </h2>
         <Button type="primary">increment</Button>
         <Button type="primary">decrement</Button>
       </div>
@@ -29,4 +23,16 @@ class Basic extends React.Component {
   }
 }
 
-export default Basic
+const mapStateToProps = (state) => {
+  return { home: state }
+}
+
+const mapDispatchToProps = {
+  onClick: () => {
+    return {
+      type: 'INCREMENT'
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Basic)
