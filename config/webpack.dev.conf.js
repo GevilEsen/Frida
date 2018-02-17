@@ -47,12 +47,14 @@ const config = merge(baseWebpackConfig, {
                         loader: "css-loader",
                         options: {
                             modules: true,
+                            camelCase: true,
                             localIdentName: '[path][name]__[local]--[hash:base64:5]'
                         }
                     }, {
                         loader: "less-loader",
                         options: {
                             modules: true,
+                            camelCase: true,
                             localIdentName: '[path][name]__[local]--[hash:base64:5]'
                         }
                     }
