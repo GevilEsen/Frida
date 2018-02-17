@@ -7,7 +7,8 @@ class Root extends React.Component {
   render() {
     return (
       <div>
-        {this.props.children ? this.props.children : 456}
+        <Layout />
+        {this.props.children ? this.props.children : null}
         <DevTool/>
       </div>
     )
