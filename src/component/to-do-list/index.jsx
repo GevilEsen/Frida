@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, List, Avatar } from 'antd'
+import { Icon, List, Checkbox } from 'antd'
 
 import style from './index.less'
 
@@ -26,14 +26,14 @@ class ToDo extends React.Component {
           <Icon type="check-square-o" /><span style={{ marginLeft: "5px" }}>待办事项</span>
         </div>
         <List
+          style={{padding: "20px 20px 0"}}
           itemLayout="horizontal"
           dataSource={data}
           renderItem={item => (
-            <List.Item>
+            <List.Item className={style.listItem}>
               <List.Item.Meta
-                avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                avatar={<Checkbox />}
                 title={<a href="https://ant.design">{item.title}</a>}
-                description="Ant Design, a design language for background applications, is refined by Ant UED Team"
               />
             </List.Item>
           )}

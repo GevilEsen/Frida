@@ -1,0 +1,35 @@
+@import '../../utils/mixin.less';
+.list {
+    padding: 0 20px;
+    height: 80px;
+    .list-col {
+        &:last-child {
+            .list-item {
+                margin-right: 0;
+            }
+        }
+        .list-item {
+            margin-right: 8px;
+            .list-icon {
+                font-size: 28px;
+                color: @white;
+                text-align: center;
+                line-height: 80px;
+                border-radius: 5px 0 0 5px;
+            }
+            .list-more {
+                text-align: center;
+                background: @white;
+                height: 80px;
+                border-radius: 5px;
+                h1 {
+                    padding-top: 10px;
+                }
+                p {
+                    color: @gray;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import AccountInfo from 'component/account-info'
 import ToDo from 'component/to-do-list'
+import ManagerList from 'component/manager-list'
 
 import style from './index.less'
 
@@ -21,14 +22,12 @@ class Home extends React.Component {
     return (
       <div className={style.home}>
         <Row>
-          <Col span={8}>
+          <Col span={6}>
             <AccountInfo />
             <ToDo />
           </Col>
-          <Col span={16}>
-            <div className={style.mangerList}>
-              manager-list
-            </div>
+          <Col span={18}>
+            <ManagerList />
             <div className={style.map}>
               map
             </div>

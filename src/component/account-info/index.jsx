@@ -9,7 +9,7 @@ class AccountInfo extends React.Component {
     return (
       <div className={style.accountInfo}>
         <Row className={style.info}>
-          <Col span={10}>
+          <Col span={10} style={{padding: '20px'}}>
             <Avatar src={AvatarImg} className={style.avatar} />
           </Col>
           <Col span={14}>
