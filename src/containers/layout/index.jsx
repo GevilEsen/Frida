@@ -24,7 +24,7 @@ class Root extends React.Component {
                 <Breadcrumb.Item>List</Breadcrumb.Item>
                 <Breadcrumb.Item>App</Breadcrumb.Item>
               </Breadcrumb> */}
-            <Content style={{ padding: '0 20px' }}>
+            <Content style={{ padding: '10px 20px' }}>
               <div className={style.main}>
                 {this.props.children ? this.props.children : <Welcome />}
               </div>
