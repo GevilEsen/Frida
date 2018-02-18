@@ -1,8 +1,8 @@
 import React from 'react'
 import Left from './left'
 import Head from './head'
+import Welcome from './welcome'
 import Foot from './foot'
-import Home from './home'
 import style from './less/index.less'
 import { Breadcrumb, Icon, Layout, Row, Col, Menu } from 'antd'
 const { SubMenu } = Menu
@@ -26,7 +26,7 @@ class Root extends React.Component {
               </Breadcrumb> */}
             <Content style={{ padding: '0 20px' }}>
               <div className={style.main}>
-                {this.props.children ? this.props.children : <Home />}
+                {this.props.children ? this.props.children : <Welcome />}
               </div>
             </Content>
             <Footer style={{ padding: '0 20px' }}><Foot /></Footer>

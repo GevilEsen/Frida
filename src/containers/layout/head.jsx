@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './less/head.less'
-import Avatar from 'static/images/avatar.jpeg'
+import Avatar from 'static/images/avatar.png'
 
 class Head extends React.Component {
   render() {

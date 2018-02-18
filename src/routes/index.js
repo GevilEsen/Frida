@@ -1,12 +1,17 @@
-import Login from '../containers/login'
-import Basic from '../containers/basic'
-import Root from '../containers/root';
+import Root from 'containers/root'
+import Home from 'containers/home'
+import Login from 'containers/login'
+import Basic from 'containers/basic'
 
 const routes = [
   {
     path: '/',
     component: Root,
     childRoutes: [
+      {
+        path: 'index(.html)',
+        component: Home
+      },
       {
         path: 'basic',
         component: Basic,
