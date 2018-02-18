@@ -1,7 +1,7 @@
 import React from 'react'
-import { Row, Col } from 'antd'
+import { Row, Col, Avatar } from 'antd'
 
-import Avatar from 'static/images/avatar.png'
+import AvatarImg from 'static/images/avatar.png'
 import style from './index.less'
 
 class AccountInfo extends React.Component {
@@ -10,7 +10,7 @@ class AccountInfo extends React.Component {
       <div className={style.accountInfo}>
         <Row className={style.info}>
           <Col span={10}>
-            <img src={Avatar} className={style.avatar} />
+            <Avatar src={AvatarImg} className={style.avatar} />
           </Col>
           <Col span={14}>
             <h2 className={style.type}>Admin</h2>

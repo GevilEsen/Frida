@@ -1,13 +1,14 @@
 import React from 'react'
+import { Avatar } from 'antd'
 import style from './less/head.less'
-import Avatar from 'static/images/avatar.png'
+import AvatarImg from 'static/images/avatar.png'
 
 class Head extends React.Component {
   render() {
     return (
       <div className={style.head}>
         <div className={style.account}>
-          <img src={Avatar} />
+          <Avatar src={AvatarImg} />
         </div>
       </div>
     )

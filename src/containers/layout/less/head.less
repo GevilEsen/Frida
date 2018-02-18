@@ -1,22 +1,24 @@
+@import '../../../utils/mixin.less';
 .head {
-  height: 60px;
-  flex: 0 0 60px;
-  line-height: 60px;
-  box-shadow: 0 0 7px 1px #cecece;
-  position: relative;
-  .account {
-    // width: 300px;
-    padding-right: 10px;
     height: 60px;
+    flex: 0 0 60px;
     line-height: 60px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    img {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      vertical-align: middle;
+    box-shadow: 0 0 7px 1px #cecece;
+    position: relative;
+    background: @white;
+    .account {
+        // width: 300px;
+        padding-right: 10px;
+        height: 60px;
+        line-height: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
     }
-  }
 }
