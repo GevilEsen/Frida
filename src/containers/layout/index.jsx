@@ -18,9 +18,7 @@ class Root extends React.Component {
             <Left />
           </Sider>
           <Layout>
-            <Header className="header">
-              <Head />
-            </Header>
+            <Header className="header"><Head /></Header>
             {/* <Breadcrumb style={{ margin: '16px 0', padding: '0 20px' }}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>List</Breadcrumb.Item>

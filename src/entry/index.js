@@ -6,7 +6,6 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import routes from '../routes'
 import store from '../redux'
 import Root from '../containers/root'
-import Home from '../containers/home'
 import Login from '../containers/login'
 
 // const routes = configureRoutes(store.getState());
