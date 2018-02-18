@@ -1,6 +1,6 @@
 import React from 'react'
 import { Menu, Icon } from 'antd'
-import {Link} from 'react-router'
+import { Link } from 'react-router'
 import style from './less/nav.less'
 
 const SubMenu = Menu.SubMenu
@@ -13,15 +13,15 @@ class Nav extends React.Component {
         className={style.nav}
         mode="inline"
       >
-        <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
-          <MenuItem key="1"><Link to="/page2">Option 1</Link></MenuItem>
-          <MenuItem key="2"><Link to="/page2">Option 1</Link></MenuItem>
-          <MenuItem key="3"><Link to="/page2">Option 1</Link></MenuItem>
-          <MenuItem key="4"><Link to="/page2">Option 1</Link></MenuItem>
-        </SubMenu>
+        {/* <SubMenu key="sub1" title={<span><Icon type="line-chart" /><span>Navigation One</span></span>}> */}
+        <MenuItem key="1"><Link to="/page2"><Icon type="line-chart" />首页</Link></MenuItem>
+        {/* <MenuItem key="2"><Link to="/page2"><Icon type="line-chart" />Option 1</Link></MenuItem> */}
+        {/* <MenuItem key="3"><Link to="/page2"><Icon type="line-chart" />Option 1</Link></MenuItem> */}
+        {/* <MenuItem key="4"><Link to="/page2"><Icon type="line-chart" />Option 1</Link></MenuItem> */}
+        {/* </SubMenu> */}
       </Menu>
-        )
-      }
-    }
-    
+    )
+  }
+}
+
 export default Nav

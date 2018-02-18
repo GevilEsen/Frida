@@ -7,12 +7,13 @@ const webpackFile = require('./webpack.file.conf') // 文件路径配置
 
 const config = merge(baseWebpackConfig, {
     output: {
-      filename: "bundle.js"
+        filename: "bundle.js"
     },
     resolve: {
         alias: {
             component: path.resolve(__dirname, '../src/component'),
             containers: path.resolve(__dirname, '../src/containers'),
+            static: path.resolve(__dirname, '../src/static'),
             utils: path.resolve(__dirname, '../src/utils')
         }
     },
@@ -67,7 +68,7 @@ const config = merge(baseWebpackConfig, {
                     }
                 ]
             }, {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|jpeg)$/,
                 use: [
                     {
                         loader: 'file-loader',

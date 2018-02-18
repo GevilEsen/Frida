@@ -7,7 +7,7 @@ class Left extends React.Component {
     return (
       <div className={style.leftPanel}>
         <div className={style.logo}>
-          <h2 className={style.text}>frida-admin</h2>
+          <h2 className={style.text}>Frida-admin</h2>
           <Nav />
         </div>
       </div>

@@ -8,8 +8,7 @@ class Root extends React.Component {
   render() {
     return (
       <div className={style.root}>
-        <Layout />
-        {this.props.children ? this.props.children : null}
+        <Layout children={this.props.children ? this.props.children : null} />
         <DevTool/>
       </div>
     )

@@ -10,8 +10,15 @@ class Root extends React.Component {
     return (
       <div className={style.layout}>
         <Left />
-        <Head />
-        <Foot />
+        <div className={style.rightPanel}>
+          <div className={style.rightLayout}>
+            <Head />
+            <div className={style.main}>
+              {this.props.children ? this.props.children : null}
+            </div>
+            <Foot />
+          </div>
+        </div>
       </div>
     )
   }
