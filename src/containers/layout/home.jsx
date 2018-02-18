@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
-import style from './index.less'
+import style from './less/home.less'
 import { connect } from 'react-redux'
 
 class Home extends React.Component {
@@ -17,8 +17,9 @@ class Home extends React.Component {
 
     return (
       <div className={style.home}>
-        <h2 className={style.title}>Hey, Frida.js!{home.count}</h2>
-        <Button type="primary" onClick={this.onClick.bind(this)}>按钮</Button>
+        <div className={style.accountInfo}>
+          account-info
+        </div>
       </div>
     )
   }

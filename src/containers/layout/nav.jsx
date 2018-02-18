@@ -11,6 +11,7 @@ class Nav extends React.Component {
     return (
       <Menu
         className={style.nav}
+        defaultSelectedKeys={['1']}
         mode="inline"
       >
         {/* <SubMenu key="sub1" title={<span><Icon type="line-chart" /><span>Navigation One</span></span>}> */}

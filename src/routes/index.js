@@ -1,4 +1,3 @@
-import Home from '../containers/home'
 import Login from '../containers/login'
 import Basic from '../containers/basic'
 import Root from '../containers/root';
@@ -9,9 +8,6 @@ const routes = [
     component: Root,
     childRoutes: [
       {
-        path: 'index(.html)',
-        component: Home
-      }, {
         path: 'basic',
         component: Basic,
         childRoutes: [

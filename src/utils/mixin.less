@@ -1,5 +1,6 @@
 @background: #222;
-@white: #999;
+@white: #fff;
+@gray: #999;
 @text-checked: #108ee9;
 
 a {
@@ -23,7 +24,7 @@ a {
       background: @background;
   }
   .ant-menu-item>a {
-      color: @white;
+      color: @gray;
   }
   .ant-menu-item-selected {
       a {
@@ -43,5 +44,19 @@ a {
   .ant-menu-inline,
   .ant-menu-vertical {
       border-right: none;
+  }
+
+  .ant-layout {
+      background: @white;
+  }
+
+  .ant-layout-header {
+      padding: 0;
+      background: @white;
+  }
+
+  .ant-layout-footer {
+    padding: 0;
+    background: @white;
   }
 }
