@@ -14,26 +14,24 @@ class Root extends React.Component {
     return (
       <div className={style.layout}>
         <Layout>
+          <Sider width={200} style={{ background: '#fff' }}>
+            <Left />
+          </Sider>
           <Layout>
-            <Sider width={200} style={{ background: '#fff' }}>
-              <Left />
-            </Sider>
-            <Layout>
-              <Header className="header">
-                <Head />
-              </Header>
-              <Breadcrumb style={{ margin: '16px 0', padding: '0 20px' }}>
+            <Header className="header">
+              <Head />
+            </Header>
+            {/* <Breadcrumb style={{ margin: '16px 0', padding: '0 20px' }}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>List</Breadcrumb.Item>
                 <Breadcrumb.Item>App</Breadcrumb.Item>
-              </Breadcrumb>
-              <Content style={{padding: '0 20px'}}>
-                <div className={style.main}>
-                  {this.props.children ? this.props.children : <Home />}
-                </div>
-              </Content>
-              <Footer style={{padding: '0 20px'}}><Foot /></Footer>
-            </Layout>
+              </Breadcrumb> */}
+            <Content style={{ padding: '0 20px' }}>
+              <div className={style.main}>
+                {this.props.children ? this.props.children : <Home />}
+              </div>
+            </Content>
+            <Footer style={{ padding: '0 20px' }}><Foot /></Footer>
           </Layout>
         </Layout>
       </div>
