@@ -12,15 +12,15 @@ echarts.registerMap('China', China)
 const dataSource = [
   {
     key: '1',
-    city: '武汉',
+    city: '湖北',
     views: 32
   }, {
     key: '2',
-    city: '杭州',
+    city: '浙江',
     views: 42
   }, {
     key: '3',
-    city: '成都',
+    city: '四川',
     views: 42
   }, {
     key: '4',
@@ -28,14 +28,14 @@ const dataSource = [
     views: 42
   }, {
     key: '5',
-    city: '深圳',
+    city: '广东',
     views: 42
   }
 ];
 
 const columns = [
   {
-    title: '城市',
+    title: '省份',
     dataIndex: 'city',
     key: 'city'
   }, {
@@ -101,6 +101,22 @@ const option = {
       data: [
         {
           name: '湖北',
+          selected: true
+        },
+        {
+          name: '浙江',
+          selected: true
+        },
+        {
+          name: '四川',
+          selected: true
+        },
+        {
+          name: '上海',
+          selected: true
+        },
+        {
+          name: '广东',
           selected: true
         }
       ]
