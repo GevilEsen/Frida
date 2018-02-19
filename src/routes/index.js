@@ -2,6 +2,7 @@ import Root from 'containers/root'
 import Home from 'containers/home'
 import Login from 'containers/login'
 import Basic from 'containers/basic'
+import Settings from 'containers/settings'
 
 const routes = [
   {
@@ -11,6 +12,10 @@ const routes = [
       {
         path: 'index(.html)',
         component: Home
+      },
+      {
+        path: 'settings',
+        component: Settings
       },
       {
         path: 'basic',

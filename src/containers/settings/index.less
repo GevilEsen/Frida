@@ -1,0 +1,40 @@
+@import '../../utils/mixin.less';
+.settings {
+    max-height: 230px;
+    overflow: hidden;
+    .current {
+        padding: 0 10px 0 0;
+        .head {
+            padding: 20px;
+            font-weight: 700;
+            border-bottom: 1px solid @gray-4;
+            background: @white;
+            border-radius: 3px 3px 0 0;
+        }
+        .info {
+            text-align: center;
+            background: @white;
+            border-radius: 0 0 3px 3px;
+        }
+    }
+    .dashboard {
+        padding: 0 10px 0 0;
+        .head {
+            padding: 20px;
+            font-weight: 700;
+            border-bottom: 1px solid @gray-4;
+            background: @white;
+            border-radius: 3px 3px 0 0;
+        }
+        .content {
+            text-align: center;
+            background: @white;
+            border-radius: 0 0 3px 3px;
+            .table {
+              th, td {
+                padding-left: 20px;
+              }
+            }
+        }
+    }
+}

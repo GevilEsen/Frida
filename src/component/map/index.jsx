@@ -5,8 +5,7 @@ import { Icon, Row, Col, Table } from 'antd'
 
 import style from './index.less'
 
-console.log(echarts)
-
+// 倒入中国版图
 echarts.registerMap('China', China)
 
 const dataSource = [

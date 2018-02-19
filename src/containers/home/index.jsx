@@ -22,7 +22,7 @@ class Home extends React.Component {
 
     return (
       <div className={style.home}>
-        <Row>
+        <Row style={{maxHeight: '455px', overflow: 'hidden'}}>
           <Col span={6}>
             <AccountInfo />
             <ToDo />
