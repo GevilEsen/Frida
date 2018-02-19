@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import AccountInfo from 'component/account-info'
 import ToDo from 'component/to-do-list'
 import ManagerList from 'component/manager-list'
+import Map from 'component/map'
 
 import style from './index.less'
 
@@ -28,9 +29,7 @@ class Home extends React.Component {
           </Col>
           <Col span={18}>
             <ManagerList />
-            <div className={style.map}>
-              map
-            </div>
+            <Map />
           </Col>
         </Row>
       </div>
